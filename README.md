@@ -27,5 +27,12 @@ The user should be able to:
   * View multiple the combined weight of multiple exercises on the `stats` page.
 
 ## Installation and Usage
+To run on local device, git clone the repo and run npm install. Afterwards, make sure you have mongoDB properly installed and the seeder file should populate the database.
 
 ## Screenshots and Instructions
+
+Main Default Screen where user can either continue work or add exercise
+![Main](screenshots/main.PNG)
+
+Stats for workouts
+![Dashboard](screenshots/dashboard.PNG)
