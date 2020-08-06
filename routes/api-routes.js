@@ -12,6 +12,17 @@ module.exports = function(app) {
             res.json(err);
         });
     });
+
+    // Get method for workouts within a range
+    app.get("/api/workouts/range", (req, res) => {
+        db.Workout.find({})
+        .then(workout => {
+            res.json(workout);
+        })
+        .catch(err => {
+            res.json(err);
+        });
+    }); 
     
     // creates new workout
     app.post("/api/workouts", async (req, res)=> {
@@ -54,13 +65,5 @@ module.exports = function(app) {
             
     })
 
-    app.get("/api/workouts/range", (req, res) => {
-        db.Workout.find({})
-        .then(workout => {
-            res.json(workout);
-        })
-        .catch(err => {
-            res.json(err);
-        });
-    }); 
+
 };
